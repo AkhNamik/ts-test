@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --black-100: rgba(0, 0, 0, 1);
+        --black-70: rgba(0, 0, 0, .7);
+        --black-50: rgba(0, 0, 0, .5);
+        --black-40: rgba(0, 0, 0, .4);
+        --black-30: rgba(0, 0, 0, .3);
+        --black-20: rgba(0, 0, 0, .2);
+        --black-10: rgba(0, 0, 0, .1);
+        --white-100: rgba(255, 255, 255, 1);
+        --white-80: rgba(255, 255, 255, .8);
+        --white-60: rgba(255, 255, 255, .6);
+        --white-30: rgba(255, 255, 255, .3);
+        --white-20: rgba(255, 255, 255, .2);
+        --white-15: rgba(255, 255, 255, .15);
+        --white-10: rgba(255, 255, 255, .10);
+        --white-7: rgba(255, 255, 255, .07);
+        --white-5: rgba(255, 255, 255, .05);
+        --accent-100: rgba(44, 100, 241, 1);
+        --accent-light-100: rgba(179, 200, 255, 1);
+        --accent-hover: rgba(46, 88, 195, 1);
+        --green-100: rgba(110, 239, 169, 1);
+        --orange-100: rgba(255, 178, 135, 1);
+        --red-100: rgba(255, 90, 90, 1);
+        --wear-FN: rgba(47, 246, 199, 1);
+        --wear-MW: rgba(39, 214, 57, 1);
+        --wear-FT: rgba(255, 241, 114, 1);
+        --wear-WW: rgba(255, 153, 33, 1);
+        --wear-BS: rgba(255, 77, 77, 1);
+        --bg-card-default: rgba(13, 12, 29, 1);
+        --bg-card-light: rgba(29, 35, 52, 1);
+        --bg-main-40: rgba(19, 17, 40, 0.4);
+        --bg-main-100: rgba(19, 17, 40, 1);
+    }
+
+    * {
+        @apply m-0 p-0 box-border;
+    }
+
+    body {
+        @apply bg-card-default font-sans;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .main-container {
+        @apply max-w-[1366px] w-full px-8 my-0 mx-auto;
+    }
+
+    .wrapper {
+        @apply flex flex-col justify-center min-h-screen w-full gap-4;
+    }
+
+    #main {
+        @apply flex-1;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.5s;
+    }
+
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+}
