@@ -47,7 +47,6 @@ const skins = ref<Skin[]>([])
 const sort = ref<null | object>(null);
 const selectedIdSkins = computed({
   get: () => paymentStore.selectedItemIds,
-  set: (value) => paymentStore.updateState('selectedItemIds', value)
 })
 const isDisabledItems = computed(() => paymentStore.currentStep > 1)
 const sortConstants = [
@@ -83,6 +82,7 @@ const toggleSkinId = (item) => {
   } else {
     addSkinId(item.id)
   }
+  paymentStore.updateState('selectedItemIds', selectedIdSkins.value)
 }
 
 const addSkinId = (id: string) => {
