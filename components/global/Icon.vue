@@ -21,8 +21,8 @@ defineProps<Props>();
 
 .nuxt-icon svg {
   margin-bottom: 0;
-  width: max-content;
-  height: max-content;
+  width: min-content !important;
+  height: min-content !important;
   display: inline-block;
 }
 </style>
