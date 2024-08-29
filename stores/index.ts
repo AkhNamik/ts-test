@@ -31,7 +31,6 @@ export const useGlobalStore = defineStore('payments', () => {
             console.error('Failed to fetch payments:', error)
         }
     }
-
     return {
         payments,
         countries,

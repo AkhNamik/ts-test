@@ -43,16 +43,17 @@ import {usePaymentsFlowStore} from "~/stores/paymentFlow";
 
 const paymentStore = usePaymentsFlowStore()
 
-const skins = ref<Skin[]>([])
-const sort = ref<null | object>(null);
-const selectedIdSkins = computed({
-  get: () => paymentStore.selectedItemIds,
-})
-const isDisabledItems = computed(() => paymentStore.currentStep > 1)
 const sortConstants = [
   {label: 'Price', icon: 'sort-up', value: 1},
   {label: 'Price', icon: 'sort-down', value: -1}
 ]
+const skins = ref<Skin[]>([])
+const sort = ref<null | object>(null);
+
+const selectedIdSkins = computed({
+  get: () => paymentStore.selectedItemIds
+})
+const isDisabledItems = computed(() => paymentStore.currentStep > 1)
 
 const {data} = await useFetch<ApiResponse>('/api/skins')
 
